@@ -74,38 +74,41 @@ const UnprotectedComponent = ({ children }: { children: React.ReactNode }) => {
             <SheetContent side="left">
               <nav className="grid gap-6 text-lg font-medium">
                 <Link
-                  to="#"
+                  to={FullRoute.GlobalRoute.UnprotectedRoute.HomeRoute}
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
                   <span className="sr-only">Acme Inc</span>
                 </Link>
                 <Link
-                  to="#"
+                  to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.DashboardRoute}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Dashboard
                 </Link>
                 <Link
-                  to="#"
+                  to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.OrderRoute.OrderListRoute}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Orders
                 </Link>
                 <Link
-                  to="#"
+                  to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductListRoute}
                   className="text-muted-foreground hover:text-foreground"
                 >
                   Products
                 </Link>
                 <Link
-                  to="#"
+                  to={FullRoute.GlobalRoute.UnprotectedRoute.CountdownRoute}
                   className="text-muted-foreground hover:text-foreground"
                 >
-                  Customers
+                  Counter
                 </Link>
-                <Link to="#" className="hover:text-foreground">
-                  Settings
+                <Link 
+                  to={FullRoute.GlobalRoute.UnprotectedRoute.LoaderRoute} 
+                  className="hover:text-foreground"
+                >
+                  Loader
                 </Link>
               </nav>
             </SheetContent>

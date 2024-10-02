@@ -40,11 +40,8 @@ const AppConnection = () => {
         <Routes>
           <Route element={<GlobalLayout />} >
 
-            <Route path="loader" element={<LoaderComponent />} />
-
             <Route element={<UnprotectedLayout />} >
               <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.HomeRoute} element={<HomePage />} />
-              <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.LoaderRoute} element={<LoaderComponent />} />
             </Route>
 
             <Route element={<ProtectedLayout />} >
@@ -71,6 +68,7 @@ const AppConnection = () => {
 
                   <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.OrderRoute.OrderListRoute} element={<OrderChild />} />
 
+                  <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.LoaderRoute} element={<LoaderComponent />} />
                   <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.CountdownRoute} element={<CountdownComponent day={15} month={10} year={2024} />} />
                   <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.SettingRoute} element={<SettingComponent />} />
                 </Route>

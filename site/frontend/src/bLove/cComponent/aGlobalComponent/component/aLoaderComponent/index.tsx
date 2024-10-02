@@ -6,7 +6,7 @@ const LoaderComponent = () => {
   // JSX
   return (
     <React.Fragment>
-      <div className="w-full h-full flex flex-col gap-24 items-center justify-center bg-emerald-200" >
+      <div className="w-full h-full flex flex-col gap-24 items-center justify-center bg-emerald-200 py-20" >
         <div className="flex gap-24" >
           <div className="loader-9"></div>
           <div className="loader-1"></div>

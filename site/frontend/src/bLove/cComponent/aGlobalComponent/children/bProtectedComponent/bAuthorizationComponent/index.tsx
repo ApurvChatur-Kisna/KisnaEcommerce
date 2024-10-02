@@ -142,39 +142,39 @@ const AuthorizationComponent = ({ children }: { children: React.ReactNode }) => 
                       <span className="sr-only">Acme Inc</span>
                     </Link>
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.DashboardRoute}
                       className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                     >
                       <Home className="h-5 w-5" />
                       Dashboard
                     </Link>
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.OrderRoute.OrderListRoute}
                       className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                     >
                       <ShoppingCart className="h-5 w-5" />
                       Orders
                     </Link>
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductListRoute}
                       className="flex items-center gap-4 px-2.5 text-foreground"
                     >
                       <Package className="h-5 w-5" />
                       Products
                     </Link>
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.UnprotectedRoute.CountdownRoute}
                       className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                     >
                       <Users2 className="h-5 w-5" />
-                      Customers
+                      Counter
                     </Link>
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.UnprotectedRoute.LoaderRoute}
                       className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
                     >
                       <LineChart className="h-5 w-5" />
-                      Settings
+                      Loader
                     </Link>
                   </nav>
                 </SheetContent>
