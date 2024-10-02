@@ -1,0 +1,68 @@
+.big {
+  align-items: center;
+  background-color: #ffd54f;
+  display: flex;
+  height: 100vh;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+}
+
+.countdown-container {
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+.countdown-li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.countdown-span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+.countdown-emoji {
+  display: none;
+  padding: 1rem;
+}
+
+.countdown-emoji-span {
+  font-size: 4rem;
+  padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+  .countdown-h1 {
+    font-size: calc(1.5rem * 1);
+  }
+  
+  .countdown-li {
+    font-size: calc(1.125rem * 1);
+  }
+  
+  .countdown-span {
+    font-size: calc(3.375rem * 1);
+  }
+}
+
+#countdown-content {
+  display: block;
+}

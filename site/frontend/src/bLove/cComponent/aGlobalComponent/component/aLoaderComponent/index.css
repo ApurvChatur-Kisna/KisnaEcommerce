@@ -1,0 +1,278 @@
+/* HTML: <div class="loader"></div> */
+.loader-1 {
+  width: 30px;
+  aspect-ratio: 1;
+  color: #514b82;
+  background: repeating-conic-gradient(from -47deg,#0000 0deg, currentColor 1deg 91deg,#0000 94deg 180deg);
+  display: flex;
+  animation: l12-0 2s infinite linear;
+}
+.loader-1::before,
+.loader-1::after {
+  content: "";
+  flex: 1;
+  background: currentColor;
+  clip-path: polygon(0 0,100% 50%, 0 100%);
+  animation: l12 1s infinite alternate;
+  transform-origin: bottom left;
+}
+.loader-1::after {
+  clip-path: polygon(100% 0,100% 100%,0 50%);
+  transform-origin: top right;
+}
+@keyframes l12-0 {
+    0%,49.9% {transform:scaleX( 1)}
+    50%,100% {transform:scaleX(-1)}
+}
+@keyframes l12 {
+    0%, 20%  {transform:rotate(0deg)}
+    80%,100% {transform:rotate(-270deg)}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-2 {
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  transform-origin: 0% 150%;
+  animation: l20-0 2s infinite linear;
+}
+.loader-2:before,
+.loader-2:after {
+  content: "";
+  flex: 1;
+  background: #f03355;
+  animation: l20-1 1s infinite linear alternate;
+  border-radius: 100px 0 0 100px;
+  transform-origin: 100% 100%;
+}
+.loader-2:after {
+  border-radius: 0 100px 100px 0;
+  transform-origin: 0% 100%;
+  --s:-1;
+}
+@keyframes l20-0 {
+   0%,10%   {transform:translateY(0)     scaleY(1)}
+   49.99%   {transform:translateY(-100%) scaleY(1)}
+   50%      {transform:translateY(-100%) scaleY(-1)}
+   90%,100% {transform:translateY(-200%) scaleY(-1)}
+}
+@keyframes l20-1 {
+   0%,20%  {transform:rotate(0deg)                    translate(0,0)     rotate(0deg)}
+   50%     {transform:rotate(calc(var(--s,1)*-90deg)) translate(0,0)     rotate(0deg)}
+   100%    {transform:rotate(calc(var(--s,1)*-90deg)) translate(0,-20px) rotate(calc(var(--s,1)*-90deg))}
+}
+
+/* HTML: <div class="loader"></div> */
+.loader-3 {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #398EB6;
+  position: relative;
+  animation: l40 .5s infinite alternate;
+}
+.loader-3:before,
+.loader-3:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: 25px 25px;
+  background-position: 0 0,100% 0,100% 100%,0 100%;
+  background-repeat: no-repeat;
+}
+.loader-3:before {
+  background-image:
+    radial-gradient(farthest-side at top    left ,currentColor 96%,#0000),
+    radial-gradient(farthest-side at top    right,currentColor 96%,#0000),
+    radial-gradient(farthest-side at bottom right,currentColor 96%,#0000),
+    radial-gradient(farthest-side at bottom left ,currentColor 96%,#0000);
+  animation: l40-1 1s infinite;
+}
+.loader-3:after {
+  background-image: 
+    radial-gradient(farthest-side at top    left ,#0000 94%,currentColor 96%),
+    radial-gradient(farthest-side at top    right,#0000 94%,currentColor 96%),
+    radial-gradient(farthest-side at bottom right,#0000 94%,currentColor 96%),
+    radial-gradient(farthest-side at bottom left ,#0000 94%,currentColor 96%);
+  animation: l40-2 1s infinite;
+}
+@keyframes l40-1 {
+  0%,10%,90%,100% {inset:0}
+  40%,60% {inset:-10px}
+}
+@keyframes l40-2 {
+  0%,40%  {transform: rotate(0)}
+  60%,100%{transform: rotate(90deg)}
+}
+
+/* HTML: <div class="loader-4"></div> */
+.loader-4 {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  animation: l6-0 1.5s infinite linear;
+}
+.loader-4:before,
+.loader-4:after {
+  content: "";
+  grid-area: 1/1;
+  background: #514b82;
+  animation: 
+    l6-1 1.5s infinite linear,
+    l6-2 1.5s infinite linear;
+}
+.loader-4:after {
+  --s:-1;
+  animation-direction: reverse;
+}
+@keyframes l6-0 {
+  0%,9%,91%,100% {background: #514b82}
+  10%,90%        {background: #0000}
+}
+@keyframes l6-1 {
+  0%,33%   {clip-path: polygon(0   0,50% 100%,100% 0,100% 100%,0 100%)}
+  66%,100% {clip-path: polygon(50% 0,50% 100%,50%  0,100% 100%,0 100%)}
+}
+@keyframes l6-2 {
+  0%,10%,90%,100% {transform: scale(var(--s,1)) translateY(0)}
+  33%,66%         {transform: scale(var(--s,1)) translateY(50%)}
+}
+
+/* HTML: <div class="loader-5"></div> */
+.loader-5 {
+  height: 80px;
+  width: 20px;
+  color: #514b82;
+  background:
+    radial-gradient(farthest-side,currentColor 94%,#0000 ) top/8px 8px,
+    linear-gradient(currentColor 0 0) top/4px 70%,
+    conic-gradient(from -30deg at bottom,#0000,currentColor 2deg 58deg,#0000 60deg) bottom            /100% 20px,
+    conic-gradient(from 150deg at top   ,#0000,currentColor 2deg 58deg,#0000 60deg) bottom 20px left 0/100% 20px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 4px;
+  animation: l15 2s infinite cubic-bezier(0.5,300,0.5,-300);
+}
+@keyframes l15 { 
+ 100% {transform: rotate(0.5deg)}
+}
+
+
+/* HTML: <div class="loader-6"></div> */
+.loader-6 {
+  width: 80px;
+  aspect-ratio: 1;
+  background: 
+    radial-gradient(farthest-side at top,#0000 calc(100% - 21px),lightblue calc(100% - 20px) 99%,#0000) bottom/100% 50%,
+    radial-gradient(farthest-side,lightblue 94%,#0000 ) left /20px 20px,
+    radial-gradient(farthest-side,lightblue 94%,#0000 ) right/20px 20px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.loader-6::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  inset: auto 0 0;
+  margin: auto;
+  border-radius: 50%;
+  background: orange;
+  transform-origin: 50% -20px;
+  animation: l14 1s infinite cubic-bezier(0.5,623,0.5,-623);
+}
+@keyframes l14 { 
+ 100% {transform: rotate(0.5deg)}
+}
+
+/* HTML: <div class="loader-7"></div> */
+.loader-7 {
+  display: inline-grid;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 7px solid #474847;
+  outline-offset: -1px;
+}
+.loader-7:before,
+.loader-7:after {
+  content:"";
+  grid-area: 1/1;
+}
+.loader-7:before {
+  clip-path: polygon(evenodd,0 0,100% 0,100% 100%,0 100%,0 0,100% 50%,83.81% 59.06%,93.3% 75%,74.75% 74.75%,75% 93.3%,59.06% 83.81%,50% 100%,40.94% 83.81%,25% 93.3%,25.25% 74.75%,6.7% 75%,16.19% 59.06%,0% 50%,16.19% 40.94%,6.7% 25%,25.25% 25.25%,25% 6.7%,40.94% 16.19%,50% 0%,59.06% 16.19%,75% 6.7%,74.75% 25.25%,93.3% 25%,83.81% 40.94%,100% 50%);
+  background: #474847;
+  animation: l4 6s linear infinite;
+}
+.loader-7:after {
+  margin: 12.5%;
+  clip-path: polygon(100% 50%,78.19% 60.26%,88.3% 82.14%,65% 75.98%,58.68% 99.24%,44.79% 79.54%,25% 93.3%,27.02% 69.28%,3.02% 67.1%,20% 50%,3.02% 32.9%,27.02% 30.72%,25% 6.7%,44.79% 20.46%,58.68% 0.76%,65% 24.02%,88.3% 17.86%,78.19% 39.74%);
+  background: #C0C0C0;
+  translate: 15.625%;
+  animation: l4 4.5s linear infinite;
+}
+@keyframes l4 {to{rotate: 1turn}}
+
+/* HTML: <div class="loader-8"></div> */
+.loader-8 {
+  --b: 5px; 
+  width: calc(12*var(--b));
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    repeating-radial-gradient(calc(2*var(--b)) at top,#0000 -1px,#000 0 calc(50% - 1px),#0000 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+    repeating-radial-gradient(calc(2*var(--b)) at bottom,#000 -1px,#0000 0 calc(50% - 1px),#000 50% calc(100% - 1px)) 50% 0;
+  background-size: 150% 50%;
+  background-repeat: no-repeat;
+  mask: 
+    radial-gradient(calc(1.5*var(--b)) at calc(100% - var(--b)/2) 0, #0000 calc(100%/3), #000 calc(100%/3 + 1px) 110%, #0000 0) calc(50% + var(--b)/2) 
+     100%/calc(3*var(--b)) 50% exclude no-repeat, 
+    conic-gradient(#000 0 0);
+  animation: l20 1s infinite linear;
+}
+@keyframes l20 {
+  100% {transform: rotate(1turn)}
+}
+
+
+/* HTML: <div class="loader-9"></div> */
+.loader-9 {
+  width: 74px;
+  height: calc(27px*0.866 + 6px);
+  display: grid;
+}
+.loader-9:before,
+.loader-9:after {
+  content: "";
+  grid-area: 1/1;
+  background:#FD135A;
+  --c1:conic-gradient(from 150deg at top   ,#000 60deg,#0000 0);
+  --c2:conic-gradient(from -30deg at bottom,#000 60deg,#0000 0);
+  --s:27px calc(27px*0.866);
+  clip-path: polygon(17px 0,calc(100% - 17px) 0,100% 100%,0 100%);
+  -webkit-mask:
+    var(--c1) left  6px top 4px,
+    var(--c2) center,
+    var(--c1) right 6px top 4px,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  -webkit-mask-repeat:no-repeat;
+  animation: l6 2s infinite both;
+}
+.loader-9:after {
+  transform: rotate(180deg);
+  transform-origin: 50% 99%;
+  animation-delay: 0.5s;
+}
+@keyframes l6 {
+  0%    {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+  8.33% {-webkit-mask-size:var(--s),0    0  ,0    0  ,auto}
+  16.67%{-webkit-mask-size:var(--s),var(--s),0    0  ,auto}
+  25%,
+  50%   {-webkit-mask-size:var(--s),var(--s),var(--s),auto}
+  58.33%{-webkit-mask-size:0    0  ,var(--s),var(--s),auto}
+  66.67%{-webkit-mask-size:0    0  ,0    0  ,var(--s),auto}
+  75%,
+  100%  {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+}
