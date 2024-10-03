@@ -1,4 +1,4 @@
-import HomeComponent from "@/bLove/cComponent/aGlobalComponent/children/aUnprotectedComponent/children/aHomeComponent";
+import HomeComponent from "@/bLove/cComponent/aGlobalComponent/outlet/aUnprotectedComponent/children/aHomeChild";
 import React from "react"
 
 

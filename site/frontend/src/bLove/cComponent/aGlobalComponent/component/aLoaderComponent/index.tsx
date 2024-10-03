@@ -7,20 +7,20 @@ const LoaderComponent = () => {
   return (
     <React.Fragment>
       <div className="w-full h-full flex flex-col gap-24 items-center justify-center bg-emerald-200 py-20" >
-        <div className="flex gap-24" >
+        {/* <div className="flex gap-24" >
           <div className="loader-9"></div>
           <div className="loader-1"></div>
           <div className="loader-8"></div>
-        </div>
-        <div className="flex gap-24" >
+        </div> */}
+        {/* <div className="flex gap-24" >
           <div className="loader-2"></div>
           <div className="loader-3"></div>
           <div className="loader-4"></div>
-        </div>  
+        </div>   */}
         <div className="flex gap-24">
-          <div className="loader-7"></div>
+          {/* <div className="loader-7"></div> */}
           <div className="loader-5"></div>
-          <div className="loader-6"></div>
+          {/* <div className="loader-6"></div> */}
         </div>
       </div>
     </React.Fragment>

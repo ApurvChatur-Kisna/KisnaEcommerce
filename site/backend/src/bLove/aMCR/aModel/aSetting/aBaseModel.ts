@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
-import defaultSchema from "../../../bLove/cUtility/bDefaultSchemaUtility";
+import defaultSchemaUtility from "../../../cUtility/bDefaultSchemaUtility";
 
 
 const schema = new mongoose.Schema({
-  ...defaultSchema
+  ...defaultSchemaUtility
 })
 
 export const BaseModel = mongoose.model("BaseModel", schema);

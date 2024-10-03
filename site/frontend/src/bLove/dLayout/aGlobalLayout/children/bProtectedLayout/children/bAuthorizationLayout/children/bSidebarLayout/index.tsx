@@ -1,4 +1,4 @@
-import SidebarComponent from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/bSidebarComponent";
+import SidebarComponent from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent";
 import React from "react"
 import { Outlet } from "react-router-dom";
 

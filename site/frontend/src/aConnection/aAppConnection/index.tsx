@@ -5,14 +5,14 @@ import { Helmet } from 'react-helmet-async';
 import { Toaster } from "@/aConnection/aShadcnConnection/components/ui/toaster";
 import EndpointRoute from "@/bLove/fRoute/aEndpointRoute";
 import HomePage from "@/bLove/ePage/aGlobalPage/aUnprotectedPage/aHomePage";
-import DashboardChild from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/bSidebarComponent/children/aDashboardChild";
-import ProductListChild from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/bSidebarComponent/children/bProductListChild";
-import ProductUpdateChild from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/bSidebarComponent/children/cProductUpdateChild";
-import OrderChild from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/bSidebarComponent/children/dOrderChild";
+import DashboardChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/aDashboardChild";
+import ProductListChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/bProductListChild";
+import ProductUpdateChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/cProductUpdateChild";
+import OrderChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/dOrderChild";
 import CountdownComponent from "@/bLove/cComponent/aGlobalComponent/component/bCountdownComponent";
 import LoaderComponent from "@/bLove/cComponent/aGlobalComponent/component/aLoaderComponent";
 import PageNotFoundComponent from "@/bLove/cComponent/aGlobalComponent/component/cPageNotFoundComponent";
-import SettingComponent from "@/bLove/cComponent/aGlobalComponent/component/dSettingComponent";
+import { AuthForm } from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/component/aAuthForm";
 
 // Layout
 const GlobalLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout'));
@@ -46,7 +46,7 @@ const AppConnection = () => {
 
             <Route element={<ProtectedLayout />} >
               <Route element={<AuthenticatedLayout />} >
-                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} element={<h1>Sign In</h1>} />
+                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} element={<AuthForm />} />
                 <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignUpRoute} element={<h1>Sign Up</h1>} />
                 <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ForgotPasswordRoute} element={<h1>Forgot Password</h1>} />
                 <Route path={`${EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute}/:token`} element={<h1>Reset Password</h1>} />
@@ -70,7 +70,7 @@ const AppConnection = () => {
 
                   <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.LoaderRoute} element={<LoaderComponent />} />
                   <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.CountdownRoute} element={<CountdownComponent day={15} month={10} year={2024} />} />
-                  <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.SettingRoute} element={<SettingComponent />} />
+                  {/* <Route path={EndpointRoute.GlobalRoute.UnprotectedRoute.SettingRoute} element={<SettingComponent />} /> */}
                 </Route>
               </Route>
             </Route>

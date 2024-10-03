@@ -1,7 +1,7 @@
 import React from "react"
 import { Outlet } from "react-router-dom";
 
-import AuthenticationComponent from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/aAuthenticationComponent";
+import AuthenticationComponent from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent";
 
 
 const AuthenticationLayout = () => {

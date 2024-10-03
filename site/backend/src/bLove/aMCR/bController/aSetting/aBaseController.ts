@@ -1,7 +1,7 @@
 import express from 'express';
 
-import catchAsyncMiddleware from "../../bMiddleware/bCatchAsyncMiddleware";
-import { BaseModel } from "../aModel/aBaseModel";
+import catchAsyncMiddleware from '../../../bMiddleware/bCatchAsyncMiddleware';
+import { BaseModel } from '../../aModel/aSetting/aBaseModel';
 
 
 const baseController = (Model=BaseModel, Label="Base") => ({

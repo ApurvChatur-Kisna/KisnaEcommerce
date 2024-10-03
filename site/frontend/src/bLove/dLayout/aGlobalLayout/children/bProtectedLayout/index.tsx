@@ -1,7 +1,7 @@
 import React from "react"
 import { Outlet } from "react-router-dom";
 
-import ProtectedComponent from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent";
+import ProtectedComponent from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent";
 
 
 const ProtectedLayout = () => {

@@ -1,4 +1,4 @@
-import TopbarComponent from "@/bLove/cComponent/aGlobalComponent/children/bProtectedComponent/bAuthorizationComponent/aTopbarComponent";
+import TopbarComponent from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/aTopbarComponent";
 import React from "react"
 import { Outlet } from "react-router-dom";
 

@@ -6,7 +6,8 @@ import cookieParserMiddleware from 'cookie-parser';
 import compressionMiddleware from 'compression';
 
 import errorMiddleware from '../bLove/bMiddleware/aErrorMiddleware';
-import { baseRoute } from '../bLove/aMCR/cRoute/aBaseRoute';
+import { baseRouter } from '../bLove/aMCR/cRoute/aSetting/aBaseRoute';
+import { menuRouter } from 'bLove/aMCR/cRoute/bUserAdministration/aMenuRoute';
 
 
 const appConnection = express();
@@ -20,7 +21,9 @@ appConnection.use(cookieParserMiddleware());
 appConnection.use(compressionMiddleware());
 
 // Routing Middleware
-appConnection.use("/api/v1/base", baseRoute)
+appConnection.use("/api/v1/base", baseRouter)
+
+appConnection.use("/api/v1/menu", menuRouter)
 
 // Error Middleware
 appConnection.use(errorMiddleware)

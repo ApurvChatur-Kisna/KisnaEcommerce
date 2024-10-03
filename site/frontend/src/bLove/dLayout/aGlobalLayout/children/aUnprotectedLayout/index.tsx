@@ -1,7 +1,7 @@
 import React from "react"
 import { Outlet } from "react-router-dom";
 
-import UnprotectedComponent from "@/bLove/cComponent/aGlobalComponent/children/aUnprotectedComponent";
+import UnprotectedComponent from "@/bLove/cComponent/aGlobalComponent/outlet/aUnprotectedComponent";
 
 
 const UnprotectedLayout = () => {

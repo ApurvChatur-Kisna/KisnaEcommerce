@@ -46,6 +46,7 @@ import Bride02 from '@/bLove/gAsset/Bride_02.jpg'
 import Bride03 from '@/bLove/gAsset/Bride_03.jpg'
 import Bride04 from '@/bLove/gAsset/Bride_04.jpg'
 import Bride05 from '@/bLove/gAsset/Bride_05.jpg'
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/aConnection/aShadcnConnection/components/ui/pagination"
 
 
 const ProductListChild = () => {
@@ -57,11 +58,11 @@ const ProductListChild = () => {
           <div className="flex items-center">
             <TabsList>
               <TabsTrigger value="all">All</TabsTrigger>
-              <TabsTrigger value="active">Active</TabsTrigger>
-              <TabsTrigger value="draft">Draft</TabsTrigger>
-              <TabsTrigger value="archived" className="hidden sm:flex">
+              <TabsTrigger value="active">In Stock</TabsTrigger>
+              <TabsTrigger value="draft">Out of Stock</TabsTrigger>
+              {/* <TabsTrigger value="archived" className="hidden sm:flex">
                 Archived
-              </TabsTrigger>
+              </TabsTrigger> */}
             </TabsList>
             <div className="ml-auto flex items-center gap-2">
               <DropdownMenu>
@@ -88,9 +89,12 @@ const ProductListChild = () => {
               <Button size="sm" variant="outline" className="h-7 gap-1">
                 <File className="h-3.5 w-3.5" />
                 <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                  Export
+                  Import
                 </span>
               </Button>
+              <input className="hidden" type="file" id="fileInput" name="fileInput" accept=".csv, .xlsx, .xls, text/csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+
+              
               <Button size="sm" className="h-7 gap-1">
                 <PlusCircle className="h-3.5 w-3.5" />
                 <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
@@ -391,9 +395,37 @@ const ProductListChild = () => {
                 </Table>
               </CardContent>
               <CardFooter>
-                <div className="text-xs text-muted-foreground">
-                  Showing <strong>1-10</strong> of <strong>32</strong>{" "}
-                  products
+                <div className="flex flex-1 justify-between items-center" >
+                  <div className="text-xs text-muted-foreground">
+                    Showing <strong>1-10</strong> of <strong>32</strong>{" "}
+                    products
+                  </div>
+                  <div>
+                    <Pagination>
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious href="#" />
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#">1</PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#" isActive>
+                            2
+                          </PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationLink href="#">3</PaginationLink>
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                        <PaginationItem>
+                          <PaginationNext href="#" />
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  </div>
                 </div>
               </CardFooter>
             </Card>
