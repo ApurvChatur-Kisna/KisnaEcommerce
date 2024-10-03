@@ -12,7 +12,10 @@ import OrderChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedCom
 import CountdownComponent from "@/bLove/cComponent/aGlobalComponent/component/bCountdownComponent";
 import LoaderComponent from "@/bLove/cComponent/aGlobalComponent/component/aLoaderComponent";
 import PageNotFoundComponent from "@/bLove/cComponent/aGlobalComponent/component/cPageNotFoundComponent";
-import { AuthForm } from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/component/aAuthForm";
+import SignUpChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/bSignUpChild";
+import SignInChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/aSignInChild";
+import ForgotPasswordChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/cForgopPasswordChild";
+import ResetPasswordChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/dResetPasswordChild";
 
 // Layout
 const GlobalLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout'));
@@ -46,10 +49,10 @@ const AppConnection = () => {
 
             <Route element={<ProtectedLayout />} >
               <Route element={<AuthenticatedLayout />} >
-                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} element={<AuthForm />} />
-                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignUpRoute} element={<h1>Sign Up</h1>} />
-                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ForgotPasswordRoute} element={<h1>Forgot Password</h1>} />
-                <Route path={`${EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute}/:token`} element={<h1>Reset Password</h1>} />
+                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} element={<SignInChild />} />
+                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignUpRoute} element={<SignUpChild />} />
+                <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ForgotPasswordRoute} element={<ForgotPasswordChild />} />
+                <Route path={`${EndpointRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute}/:token`} element={<ResetPasswordChild />} />
               </Route>
 
               <Route element={<AuthorisedLayout />} >

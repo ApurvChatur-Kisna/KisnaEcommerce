@@ -177,7 +177,7 @@ const AuthorizationHeader = ({ children }: { children: React.ReactNode }) => {
                 <SheetContent side="left" className="sm:max-w-xs">
                   <nav className="grid gap-6 text-lg font-medium">
                     <Link
-                      to="#"
+                      to={FullRoute.GlobalRoute.UnprotectedRoute.HomeRoute}
                       className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
                     >
                       <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
@@ -225,7 +225,7 @@ const AuthorizationHeader = ({ children }: { children: React.ReactNode }) => {
                 <BreadcrumbList>
                   <BreadcrumbItem>
                     <BreadcrumbLink asChild>
-                      <Link to="#">Dashboard</Link>
+                      <Link to={"#"}>Dashboard</Link>
                     </BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
@@ -268,10 +268,19 @@ const AuthorizationHeader = ({ children }: { children: React.ReactNode }) => {
                 <DropdownMenuContent align="end">
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Support</DropdownMenuItem>
+                  <DropdownMenuItem>Check Profile</DropdownMenuItem>
+                  <DropdownMenuItem>Edit Profile</DropdownMenuItem>
+                  <DropdownMenuItem>Change Password</DropdownMenuItem>
+                  <DropdownMenuItem>Close Account</DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem>Logout</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>
+                    <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} >Sign In</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignUpRoute} >Sign Up</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </header>

@@ -135,10 +135,25 @@ const UnprotectedComponent = ({ children }: { children: React.ReactNode }) => {
               <DropdownMenuContent align="end">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Settings</DropdownMenuItem>
-                <DropdownMenuItem>Support</DropdownMenuItem>
+                <DropdownMenuItem>Check Profile</DropdownMenuItem>
+                  <DropdownMenuItem>Edit Profile</DropdownMenuItem>
+                  <DropdownMenuItem>Change Password</DropdownMenuItem>
+                  <DropdownMenuItem>Close Account</DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Logout</DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>
+                  <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignInRoute} >Sign In</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.SignUpRoute} >Sign Up</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ForgotPasswordRoute} >Forgot Password</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute} >Reset Password</Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
