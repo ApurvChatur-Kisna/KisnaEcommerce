@@ -152,7 +152,7 @@ const UnprotectedComponent = ({ children }: { children: React.ReactNode }) => {
                   <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ForgotPasswordRoute} >Forgot Password</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link to={FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute} >Reset Password</Link>
+                  <Link to={`${FullRoute.GlobalRoute.ProtectedRoute.AuthenticationRoute.ResetPasswordRoute}/hello-boi`} >Reset Password</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
