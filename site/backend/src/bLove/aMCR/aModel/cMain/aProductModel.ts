@@ -7,4 +7,4 @@ const schema = new mongoose.Schema({
   ...defaultSchemaUtility
 })
 
-export const BaseModel = mongoose.model("BaseModel", schema);
+export const ProductModel = mongoose.model("ProductModel", schema);

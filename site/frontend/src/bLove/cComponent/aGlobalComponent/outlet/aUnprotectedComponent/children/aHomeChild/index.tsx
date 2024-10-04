@@ -1,8 +1,8 @@
 import React from "react"
 
-import Image1 from '@/bLove/gAsset/png1.png'
+import Image1 from '@/bLove/hAsset/png1.png'
 import { Link } from "react-router-dom";
-import FullRoute from "@/bLove/fRoute/bFullRoute";
+import FullRoute from "@/bLove/gRoute/bFullRoute";
 import MetalPrice from "@/bLove/cComponent/aGlobalComponent/component/dMetalPrice";
 
 const HomeChild = () => {

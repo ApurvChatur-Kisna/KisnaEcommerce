@@ -1,4 +1,4 @@
-import FullRoute from "@/bLove/fRoute/bFullRoute";
+import FullRoute from "@/bLove/gRoute/bFullRoute";
 import React from "react"
 import { Link } from "react-router-dom";
 

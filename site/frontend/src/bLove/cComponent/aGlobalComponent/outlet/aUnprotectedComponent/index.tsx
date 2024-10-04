@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { CircleUser, Menu, Package2, Search } from "lucide-react"
 
-import FullRoute from "@/bLove/fRoute/bFullRoute"
+import FullRoute from "@/bLove/gRoute/bFullRoute"
 
 import { Button } from "@/aConnection/aShadcnConnection/components/ui/button"
 import {

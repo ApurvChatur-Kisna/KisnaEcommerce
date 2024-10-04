@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/aCo
 import { Input } from "@/aConnection/aShadcnConnection/components/ui/input"
 import { Label } from "recharts"
 import { Link } from "react-router-dom"
-import FullRoute from "@/bLove/fRoute/bFullRoute"
+import FullRoute from "@/bLove/gRoute/bFullRoute"
 
 
 const SignInChild = () => {

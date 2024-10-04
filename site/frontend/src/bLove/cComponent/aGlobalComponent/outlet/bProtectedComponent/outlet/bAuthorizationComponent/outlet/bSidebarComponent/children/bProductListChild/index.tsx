@@ -41,11 +41,11 @@ import {
   TabsTrigger,
 } from "@/aConnection/aShadcnConnection/components/ui/tabs"
 
-import Bride01 from '@/bLove/gAsset/Bride_01.jpg'
-import Bride02 from '@/bLove/gAsset/Bride_02.jpg'
-import Bride03 from '@/bLove/gAsset/Bride_03.jpg'
-import Bride04 from '@/bLove/gAsset/Bride_04.jpg'
-import Bride05 from '@/bLove/gAsset/Bride_05.jpg'
+import Bride01 from '@/bLove/hAsset/Bride_01.jpg'
+import Bride02 from '@/bLove/hAsset/Bride_02.jpg'
+import Bride03 from '@/bLove/hAsset/Bride_03.jpg'
+import Bride04 from '@/bLove/hAsset/Bride_04.jpg'
+import Bride05 from '@/bLove/hAsset/Bride_05.jpg'
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/aConnection/aShadcnConnection/components/ui/pagination"
 
 

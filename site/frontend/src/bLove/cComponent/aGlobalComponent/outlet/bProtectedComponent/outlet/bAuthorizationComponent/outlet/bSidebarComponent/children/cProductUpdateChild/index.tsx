@@ -38,9 +38,9 @@ import {
   ToggleGroupItem,
 } from "@/aConnection/aShadcnConnection/components/ui/toggle-group"
 
-import Bride01 from '@/bLove/gAsset/Bride_01.jpg'
-import Bride02 from '@/bLove/gAsset/Bride_02.jpg'
-import Bride03 from '@/bLove/gAsset/Bride_03.jpg'
+import Bride01 from '@/bLove/hAsset/Bride_01.jpg'
+import Bride02 from '@/bLove/hAsset/Bride_02.jpg'
+import Bride03 from '@/bLove/hAsset/Bride_03.jpg'
 
 
 const ProductUpdateChild = () => {

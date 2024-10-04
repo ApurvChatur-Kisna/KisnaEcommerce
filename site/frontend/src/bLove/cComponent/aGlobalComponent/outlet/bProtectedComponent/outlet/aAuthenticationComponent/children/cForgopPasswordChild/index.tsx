@@ -11,7 +11,7 @@ import {
 } from "@/aConnection/aShadcnConnection/components/ui/card"
 import { Input } from "@/aConnection/aShadcnConnection/components/ui/input"
 import { Label } from "@/aConnection/aShadcnConnection/components/ui/label"
-import FullRoute from "@/bLove/fRoute/bFullRoute"
+import FullRoute from "@/bLove/gRoute/bFullRoute"
 import { InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot } from "@/aConnection/aShadcnConnection/components/ui/input-otp"
 
 

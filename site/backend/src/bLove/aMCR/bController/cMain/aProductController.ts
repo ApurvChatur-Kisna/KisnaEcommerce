@@ -1,10 +1,10 @@
 import express from 'express';
 
 import catchAsyncMiddleware from '../../../bMiddleware/bCatchAsyncMiddleware';
-import { BaseModel } from '../../aModel/aSetting/aBaseModel';
+import { ProductModel } from '../../../aMCR/aModel/cMain/aProductModel';
 
 
-const baseController = (Model=BaseModel, Label="Base") => ({
+const productController = (Model=ProductModel, Label="Product") => ({
   // List
   list: catchAsyncMiddleware(
     async (request: express.Request, response: express.Response, nex: express.NextFunction) => {
@@ -101,4 +101,4 @@ const baseController = (Model=BaseModel, Label="Base") => ({
 
 })
 
-export default baseController;
+export default productController;

@@ -42,9 +42,9 @@ import {
 } from "@/aConnection/aShadcnConnection/components/ui/tooltip"
 
 import { ModeToggle } from '@/aConnection/aShadcnConnection/components/mode-toggle'
-import FullRoute from "@/bLove/fRoute/bFullRoute"
+import FullRoute from "@/bLove/gRoute/bFullRoute"
 import { cn } from "@/aConnection/aShadcnConnection/lib/utils"
-import EndpointRoute from "@/bLove/fRoute/aEndpointRoute"
+import EndpointRoute from "@/bLove/gRoute/aEndpointRoute"
 
 
 const AuthorizationComponent = ({ children }: { children: React.ReactNode }) => {

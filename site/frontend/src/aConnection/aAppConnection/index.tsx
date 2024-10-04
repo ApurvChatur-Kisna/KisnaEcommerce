@@ -3,8 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 
 import { Toaster } from "@/aConnection/aShadcnConnection/components/ui/toaster";
-import EndpointRoute from "@/bLove/fRoute/aEndpointRoute";
-import HomePage from "@/bLove/ePage/aGlobalPage/aUnprotectedPage/aHomePage";
+import EndpointRoute from "@/bLove/gRoute/aEndpointRoute";
+import HomePage from "@/bLove/fPage/aGlobalPage/aUnprotectedPage/aHomePage";
 import DashboardChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/aDashboardChild";
 import ProductListChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/bProductListChild";
 import ProductUpdateChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/cProductUpdateChild";
@@ -16,15 +16,16 @@ import SignUpChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedCo
 import SignInChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/aSignInChild";
 import ForgotPasswordChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/cForgopPasswordChild";
 import ResetPasswordChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/aAuthenticationComponent/children/dResetPasswordChild";
+import ProductListPage from "@/bLove/fPage/aGlobalPage/bProtectedPage/bAuthorizationPage/bSidebarPage/bProductPage/aListPage";
 
 // Layout
-const GlobalLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout'));
-const UnprotectedLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/aUnprotectedLayout'));
-const ProtectedLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/bProtectedLayout'));
-const AuthenticatedLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/bProtectedLayout/children/aAuthenticationLayout'));
-const AuthorisedLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout'));
-const TopbarLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout/children/aTopbarLayout'));
-const SidebarLayout = React.lazy(() => import('@/bLove/dLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout/children/bSidebarLayout'));
+const GlobalLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout'));
+const UnprotectedLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/aUnprotectedLayout'));
+const ProtectedLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/bProtectedLayout'));
+const AuthenticatedLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/bProtectedLayout/children/aAuthenticationLayout'));
+const AuthorisedLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout'));
+const TopbarLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout/children/aTopbarLayout'));
+const SidebarLayout = React.lazy(() => import('@/bLove/eLayout/aGlobalLayout/children/bProtectedLayout/children/bAuthorizationLayout/children/bSidebarLayout'));
 
 // Page
 
@@ -63,7 +64,7 @@ const AppConnection = () => {
                 <Route element={<SidebarLayout />} >
                   <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.DashboardRoute} element={<DashboardChild />} />
 
-                  <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductListRoute} element={<ProductListChild />} />
+                  <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductListRoute} element={<ProductListPage />} />
                   <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductUpdateRoute} element={<ProductUpdateChild />} />
 
                   <Route path={EndpointRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.OrderRoute.OrderListRoute} element={<OrderChild />} />

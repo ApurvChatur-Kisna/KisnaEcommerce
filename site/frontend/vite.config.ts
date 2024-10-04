@@ -29,12 +29,12 @@ const manifestForPlugIn = {
       type:'image/png',
       purpose:'apple touch icon',
     },
-    {
-      src: '/maskable_icon.png',
-      sizes:'512x512',
-      type:'image/png',
-      purpose:'any maskable',
-    }
+    // {
+    //   src: '/maskable_icon.png',
+    //   sizes:'512x512',
+    //   type:'image/png',
+    //   purpose:'any maskable',
+    // }
     ],
     theme_color:'#D3CEFE',
     background_color:'#1A0F4E',
