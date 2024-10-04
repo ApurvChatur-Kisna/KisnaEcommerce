@@ -33,10 +33,7 @@ const AppConnection = () => {
   // JSX  
   return (
     <React.Fragment>
-      <Helmet>
-        <title>HK Jewels - KISNA</title>
-        <link rel="icon" href="./public/Business/ApurvChatur/favicon_io/favicon.ico" />
-      </Helmet>
+      <Helmet><title>HK Jewels - KISNA</title></Helmet>
       <Toaster />
 
       <Suspense fallback={<LoaderComponent />}>
