@@ -15,7 +15,6 @@ const validatorMiddleware = (request: express.Request, response: express.Respons
   if (errors.isEmpty()) return next();
   else return next( new ErrorUtility(joinErrors, 400) ); 
 }
-
 const baseCreateValidation = () => [
   body("aTitle")
     .notEmpty().withMessage("Please enter title")

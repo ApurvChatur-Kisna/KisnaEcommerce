@@ -16,6 +16,7 @@ import {
 import { Input } from "@/aConnection/aShadcnConnection/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/aConnection/aShadcnConnection/components/ui/sheet"
 import { ModeToggle } from "@/aConnection/aShadcnConnection/components/mode-toggle"
+import { cn } from "@/aConnection/aShadcnConnection/lib/utils"
 
 
 const UnprotectedComponent = ({ children }: { children: React.ReactNode }) => {
@@ -82,33 +83,43 @@ const UnprotectedComponent = ({ children }: { children: React.ReactNode }) => {
                 </Link>
                 <Link
                   to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.DashboardRoute}
-                  className="text-muted-foreground hover:text-foreground"
+                  className={cn(
+                    "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   Dashboard
                 </Link>
                 <Link
                   to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.OrderRoute.OrderListRoute}
-                  className="text-muted-foreground hover:text-foreground"
+                  className={cn(
+                    "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   Orders
                 </Link>
                 <Link
                   to={FullRoute.GlobalRoute.ProtectedRoute.AuthorizationRoute.SidebarRoute.ProductRoute.ProductListRoute}
-                  className="text-muted-foreground hover:text-foreground"
+                  className={cn(
+                    "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   Products
                 </Link>
                 <Link
                   to={FullRoute.GlobalRoute.UnprotectedRoute.CountdownRoute}
-                  className="text-muted-foreground hover:text-foreground"
+                  className={cn(
+                    "text-muted-foreground hover:text-foreground"
+                  )}
                 >
                   Counter
                 </Link>
                 <Link 
                   to={FullRoute.GlobalRoute.UnprotectedRoute.LoaderRoute} 
-                  className="hover:text-foreground"
+                  className={cn(
+                    "text-muted-foreground hover:text-foreground"
+                  )}
                 >
-                  Loader
+                  Loadersdsa
                 </Link>
               </nav>
             </SheetContent>

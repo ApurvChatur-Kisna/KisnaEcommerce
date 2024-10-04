@@ -7,7 +7,7 @@ import compressionMiddleware from 'compression';
 
 import errorMiddleware from '../bLove/bMiddleware/aErrorMiddleware';
 import { baseRouter } from '../bLove/aMCR/cRoute/aSetting/aBaseRoute';
-import { menuRouter } from 'bLove/aMCR/cRoute/bUserAdministration/aMenuRoute';
+import { menuRouter } from '../bLove/aMCR/cRoute/bUserAdministration/aMenuRoute';
 
 
 const appConnection = express();
