@@ -3,6 +3,7 @@ import React from "react"
 import Image1 from '@/bLove/gAsset/png1.png'
 import { Link } from "react-router-dom";
 import FullRoute from "@/bLove/fRoute/bFullRoute";
+import MetalPrice from "@/bLove/cComponent/aGlobalComponent/component/dMetalPrice";
 
 const HomeChild = () => {
   // JSX
@@ -10,6 +11,7 @@ const HomeChild = () => {
     <React.Fragment>
       <section className="pt-24 bg-inherit">
         <div className="px-12 mx-auto max-w-7xl">
+                <MetalPrice />
             <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-current md:text-4xl md:tracking-tight">
                     <span >Effortlessly</span> <span className="block w-full py-2 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-[#1A0F4E] to-[#1A0F4E] dark:from-[#D3CEFE] dark:to-[#D3CEFE] lg:inline">Manage Your eCommerce</span> <span>Store for Maximum Success</span>
