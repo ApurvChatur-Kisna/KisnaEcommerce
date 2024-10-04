@@ -35,13 +35,13 @@ const manifestForPlugIn = {
       type:'image/png',
       purpose:'any maskable',
     }
-  ],
-  theme_color:'#171717',
-  background_color:'#f0e7db',
-  display:"standalone",
-  scope:'/',
-  start_url:"/",
-  orientation:'portrait'
+    ],
+    theme_color:'#171717',
+    background_color:'#f0e7db',
+    display:"standalone",
+    scope:'/',
+    start_url:"/",
+    orientation:'portrait'
   }
 }
 
