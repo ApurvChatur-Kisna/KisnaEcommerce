@@ -17,15 +17,15 @@ export default defineConfig({
         "theme_color": "#4A274F",
         "icons":[
           {
-            src: "favicon.ico",
+            src: "logo.png",
             sizes: "512x512",
             type: "image/png",
           },
-          {
-            src: "favicon.ico",
-            sizes: "192x192",
-            type: "image/png",
-          },
+          // {
+          //   src: "Business/Abol/favicon_io/android-chrome-192x192.png",
+          //   sizes: "192x192",
+          //   type: "image/png",
+          // },
         ],
       } ,
       registerType: 'autoUpdate',
