@@ -5,13 +5,13 @@ import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@/aConnection/aShadcnConnection/components/theme-provider'
 import { HelmetProvider } from 'react-helmet-async'
 import './aConnection/aShadcnConnection/index.css'
-import { Provider as ReduxProvider } from 'react-redux'
-import store from './bLove/bRedux/aStore'
+// import { Provider as ReduxProvider } from 'react-redux'
+// import store from './bLove/bRedux/aStore'
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ReduxProvider store={store} >
+    {/* <ReduxProvider store={store} > */}
       <HelmetProvider>
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
           <BrowserRouter>
@@ -19,6 +19,6 @@ createRoot(document.getElementById('root')!).render(
           </BrowserRouter>
         </ThemeProvider>
       </HelmetProvider>
-    </ReduxProvider>
+    {/* </ReduxProvider> */}
   </StrictMode>,
 )

@@ -67,8 +67,8 @@ const MetalPriceComponent: React.FC = () => {
   return (
     <React.Fragment>
       <div className="mb-4">
-        {error && <div className="text-xs text-red-500 text-center py-2">{error}</div>}
-        {loading && <div className="text-xs text-muted text-center py-2">Loading...</div>}
+        {error && <div className="text-xs text-red-500 text-left md:text-center py-2">{error}</div>}
+        {loading && <div className="text-xs text-muted text-left md:text-center py-2">Loading...</div>}
 
         {goldPrice !== null && (
           <div className="flex flex-1 gap-4 align-middle justify-center py-2">
@@ -86,7 +86,7 @@ const MetalPriceComponent: React.FC = () => {
           </div>
         )}
 
-        {<div className="text-xs text-yellow-300 text-center">Note: Price updates at 11 AM everyday</div>}
+        {<div className="text-xs text-yellow-300 text-left md:text-center">Note: Price updates at 11 AM everyday</div>}
       </div>
     </React.Fragment>
   );
