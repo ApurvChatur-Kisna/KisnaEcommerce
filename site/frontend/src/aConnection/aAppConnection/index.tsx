@@ -6,7 +6,6 @@ import { Toaster } from "@/aConnection/aShadcnConnection/components/ui/toaster";
 import EndpointRoute from "@/bLove/gRoute/aEndpointRoute";
 import HomePage from "@/bLove/fPage/aGlobalPage/aUnprotectedPage/aHomePage";
 import DashboardChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/aDashboardChild";
-import ProductListChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/bProductListChild";
 import ProductUpdateChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/cProductUpdateChild";
 import OrderChild from "@/bLove/cComponent/aGlobalComponent/outlet/bProtectedComponent/outlet/bAuthorizationComponent/outlet/bSidebarComponent/children/dOrderChild";
 import CountdownComponent from "@/bLove/cComponent/aGlobalComponent/component/bCountdownComponent";

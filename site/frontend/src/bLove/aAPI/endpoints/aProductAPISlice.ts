@@ -8,7 +8,7 @@ const productAPISlice = apiSlice.injectEndpoints({
 
     // List
     list: builder.query({
-      query: (data) => ({
+      query: () => ({
         url: `${TARGET_URL}/list`,
         method: 'GET',
       }),
