@@ -3,8 +3,7 @@ import React from "react"
 import Image1 from '@/bLove/hAsset/png1.png'
 import { Link } from "react-router-dom";
 import FullRoute from "@/bLove/gRoute/bFullRoute";
-import MetalPrice from "@/bLove/cComponent/aGlobalComponent/component/dMetalPrice";
-import MetalPriceComponent from "@/bLove/cComponent/aGlobalComponent/component/eMetalPriceComponent";
+import MetalPriceComponent from "@/bLove/cComponent/aGlobalComponent/component/dMetalPriceComponent";
 
 const HomeChild = () => {
   // JSX
@@ -12,7 +11,6 @@ const HomeChild = () => {
     <React.Fragment>
       <section className="pt-24 bg-inherit">
         <div className="px-12 mx-auto max-w-7xl">
-                {/* <MetalPrice /> */}
                 <MetalPriceComponent />
             <div className="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
                 <h1 className="mb-8 text-4xl font-extrabold leading-none tracking-normal text-current md:text-4xl md:tracking-tight">

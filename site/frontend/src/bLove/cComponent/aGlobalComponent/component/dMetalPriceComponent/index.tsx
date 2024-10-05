@@ -4,15 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/aCo
 import formatNumberWithCommas from '@/bLove/dUtility/aFormatNumbersWithComma';
 
 // Define the structure of the API response
-interface GoldPriceData {
+interface MetalPriceComponentInterface {
   price: number;
   metal: string;
   currency: string;
   timestamp: string;
 }
 
-const GoldPrice: React.FC = () => {
-  const [goldPrice, setGoldPrice] = useState<GoldPriceData | null>(null);
+const MetalPriceComponent: React.FC = () => {
+  const [goldPrice, setGoldPrice] = useState<MetalPriceComponentInterface | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true); // Loading state
 
@@ -52,10 +52,10 @@ const GoldPrice: React.FC = () => {
       };
 
       try {
-        const response: AxiosResponse<GoldPriceData> = await axios.get(apiUrl, config);
+        const response: AxiosResponse<MetalPriceComponentInterface> = await axios.get(apiUrl, config);
         setGoldPrice(response.data); // Set the gold price from API response
       } catch (error: any) {
-        setError(error.message); // Handle error
+        setError(error?.response?.data?.error || error.message); // Handle error
       } finally {
         setLoading(false)
       }
@@ -64,19 +64,14 @@ const GoldPrice: React.FC = () => {
     fetchGoldPrice(); 
   }, []); 
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
   return (
     <React.Fragment>
       <div className="mb-4">
-        {<div className="text-xs text-yellow-300 text-center">Price updates at 11 AM everyday</div>}
-        {error && <div className="text-xs text-red-500 text-center">{error}</div>}
-        {loading && <div className="text-xs text-white text-center">Loading...</div>}
+        {error && <div className="text-xs text-red-500 text-center py-2">{error}</div>}
+        {loading && <div className="text-xs text-muted text-center py-2">Loading...</div>}
 
         {goldPrice !== null && (
-          <div className="flex flex-1 gap-4 align-middle justify-center pb-4 pt-2">
+          <div className="flex flex-1 gap-4 align-middle justify-center py-2">
             <Card>
               <CardHeader className="pb-2">
                 <CardDescription>Gold per ounce</CardDescription>
@@ -90,9 +85,11 @@ const GoldPrice: React.FC = () => {
             </Card>
           </div>
         )}
+
+        {<div className="text-xs text-yellow-300 text-center">Note: Price updates at 11 AM everyday</div>}
       </div>
     </React.Fragment>
   );
 };
 
-export default GoldPrice;
+export default MetalPriceComponent;
